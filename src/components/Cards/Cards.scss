@@ -1,0 +1,43 @@
+.card {
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.pic {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 360px;
+  max-height: 275px;
+  border-radius: 20px;
+  overflow: hidden;
+  &:hover {
+    .overlay {
+      height: 15%;
+      transition: all 0.5s ease-out;
+    }
+  }
+}
+
+.overlay {
+  padding-left: 15px;
+  height: 25px;
+  position: absolute;
+  overflow: hidden;
+  width: 360px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  h4 {
+    text-transform: capitalize;
+  }
+  p {
+    padding-top: 5px;
+  }
+}
+
+img {
+  width: 360px;
+  height: 275px;
+}

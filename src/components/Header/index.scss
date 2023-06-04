@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.header {
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0 35px 0;
+    align-items: center;
+    .logo__image {
+      img {
+        height: 64px;
+        width: 64px;
+      }
+    }
+    .swicher {
+      .turn_light {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    margin-right: -20px;
+
+    .Input,
+    .select {
+      position: relative;
+      height: 45px;
+      width: calc(100%);
+      margin-right: 20px;
+      border-radius: 8px;
+      color: $white;
+      border: 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: $black;
+      cursor: pointer;
+
+      img {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .select:last-child {
+      input {
+        background-color: white;
+        color: black;
+      }
+    }
+    .open_select {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: none;
+    }
+    /* полоса прокрутки (скроллбар) */
+    .Select_Option ::-webkit-scrollbar {
+      width: 9px; /* ширина для вертикального скролла */
+    }
+
+    /* ползунок скроллбара */
+    .Select_Option ::-webkit-scrollbar-thumb {
+      height: 13px;
+      border-radius: 10px;
+      background-color: #7b7b7b;
+      box-shadow: inset 1px 1px 10px #f3faf7;
+      position: absolute;
+    }
+  }
+}

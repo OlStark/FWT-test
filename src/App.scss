@@ -1,0 +1,138 @@
+@import "./nullStyle.scss";
+
+$black: #000;
+$white: #fff;
+$gray: #808080;
+$white-gray: #efefef;
+
+// :root {
+//   --bg-dark: #000;
+//   --bg-light: #fff;
+//   --c-light: #fff;
+// }
+.App {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+  }
+  .light {
+    background-color: $white !important;
+    color: $black !important;
+    border-color: $gray !important;
+    .Select__optionContainer li:hover {
+      background-color: $black !important;
+      color: $white !important;
+    }
+    .Input__Option {
+      border: none !important;
+      .Input {
+        background-color: $white-gray !important;
+      }
+    }
+
+    * {
+      fill: $black;
+    }
+  }
+
+  h4 {
+    padding-top: 5px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.Pagination {
+  display: flex;
+  width: fit-content;
+}
+
+.PaginationPage {
+  width: 39px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid black;
+  border-right: none;
+  color: black;
+  background: inherit;
+  &:first-of-type {
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+  }
+  &:last-child {
+    border-radius: 0 8px 8px 0;
+    border-right: 1px solid;
+    cursor: pointer;
+  }
+  &:only-child {
+    border-radius: 8px;
+  }
+  &:hover {
+    background: #ededed;
+    color: black;
+    border-color: black;
+  }
+  &:disabled {
+    border-color: #b3b3b3;
+    color: #b3b3b3;
+
+    &:hover {
+      cursor: auto;
+      background: inherit;
+    }
+  }
+  &--dark {
+    border: 1px solid white;
+    color: white;
+    border-right: none;
+
+    &:hover {
+      background: #464646;
+      color: white;
+      border-color: white;
+    }
+    &:disabled {
+      border-color: #4c4c4c;
+      color: #4c4c4c;
+    }
+  }
+  &.PaginationPageWithActive {
+    background: black;
+    color: white;
+    border-color: black;
+    &:hover {
+      cursor: auto;
+      background: black;
+      color: white;
+      border-color: black;
+    }
+    &--dark {
+      background: white;
+      color: black;
+      border-color: white;
+      &:hover {
+        background: white;
+        color: black;
+        border-color: white;
+      }
+    }
+  }
+}
