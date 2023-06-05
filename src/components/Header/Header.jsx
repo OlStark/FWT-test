@@ -27,6 +27,8 @@ function Header({
   defaultLocation,
   setDefaultAuthor,
   setDefaultLocation,
+  boolOption,
+  setBoolOption,
 }) {
   const flag = true;
 
@@ -41,7 +43,7 @@ function Header({
         <div className="swicher">
           <TurnLight
             className="turn_light"
-            onClick={() => setIsLight(!isLight)}
+            onClick={() => setIsLight(!isLight) + setBoolOption(!boolOption)}
           />
         </div>
       </div>

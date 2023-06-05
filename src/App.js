@@ -6,7 +6,6 @@ import { getPageCount } from "./components/utils/pages";
 import { Pagination } from "fwt-internship-uikit";
 import Header from "./components/Header/Header";
 import { ThemeProvider } from "./providers/ThemeProvider";
-import useTheme from "./hooks/useTheme";
 import Layout from "./components/Layout/Layout";
 
 function App() {
@@ -37,7 +36,7 @@ function App() {
   const [currentAuthor, setCurrentAuthor] = useState(defaultAuthor);
   const [currentLocation, setCurrenLocation] = useState(defaultLocation);
 
-  const { isLight } = useTheme();
+  const [boolOption, setBoolOption] = useState(true);
 
   async function fetchAuthors() {
     const dataAuthors = await PictureService.getAuthors();
@@ -140,13 +139,15 @@ function App() {
               setDefaultLocation={setDefaultLocation}
               defaultAuthor={defaultAuthor}
               defaultLocation={defaultLocation}
+              boolOption={boolOption}
+              setBoolOption={setBoolOption}
             />
             <Card picture={picture} />
             <Pagination
               currentPage={page}
               pagesAmount={totalPages}
               onChange={changePage}
-              isDarkTheme={true}
+              isDarkTheme={boolOption}
             />
           </div>
         </Layout>

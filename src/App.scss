@@ -20,6 +20,9 @@ html {
     .Select__optionContainer li:hover {
       background-color: $black !important;
       color: $white !important;
+      &:focus {
+        border-color: $black;
+      }
     }
     .Input__Option {
       border: none !important;
@@ -85,7 +88,8 @@ html {
     border-radius: 0.8rem;
   }
   &:hover {
-    @include backWhite;
+    background: $black;
+    color: $white;
   }
   &:disabled {
     border-color: $light-gray;
