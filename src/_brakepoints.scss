@@ -1,0 +1,62 @@
+@mixin sm-u {
+  @media (min-width: map-get($brakepoints, sm)) {
+    @content;
+  }
+}
+
+@mixin md-u {
+  @media (min-width: map-get($brakepoints, md)) {
+    @content;
+  }
+}
+
+@mixin lg-u {
+  @media (min-width: map-get($brakepoints, lg)) {
+    @content;
+  }
+}
+
+//Desktop first
+@mixin sm {
+  @media (max-width: map-get($brakepoints, md) - 0.2px) and (min-width: map-get($brakepoints, sm)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($brakepoints, lg) - 0.2px) and (min-width: map-get($brakepoints, md)) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($brakepoints, xl) - 0.2px) and (min-width: map-get($brakepoints, lg)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($brakepoints, xl)) {
+    @content;
+  }
+}
+
+//Mobile first
+
+@mixin lg-d {
+  @media (max-width: map-get($brakepoints, xl) - 0.2px) {
+    @content;
+  }
+}
+
+@mixin md-d {
+  @media (max-width: map-get($brakepoints, lg) - 0.2px) {
+    @content;
+  }
+}
+
+@mixin sm-d {
+  @media (max-width: map-get($brakepoints, md) - 0.2px) {
+    @content;
+  }
+}

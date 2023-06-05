@@ -1,15 +1,12 @@
+@import "./vars";
+@import "./brakepoints";
 @import "./nullStyle.scss";
+@import "./amountStyles.scss";
 
-$black: #000;
-$white: #fff;
-$gray: #808080;
-$white-gray: #efefef;
+html {
+  font-size: 62.5%;
+}
 
-// :root {
-//   --bg-dark: #000;
-//   --bg-light: #fff;
-//   --c-light: #fff;
-// }
 .App {
   .layout {
     display: flex;
@@ -27,7 +24,7 @@ $white-gray: #efefef;
     .Input__Option {
       border: none !important;
       .Input {
-        background-color: $white-gray !important;
+        background-color: $light-gray !important;
       }
     }
 
@@ -37,13 +34,13 @@ $white-gray: #efefef;
   }
 
   h4 {
-    padding-top: 5px;
-    line-height: 20px;
-    font-size: 18px;
+    padding-top: 0.5rem;
+    line-height: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
   p {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
@@ -57,42 +54,42 @@ $white-gray: #efefef;
 }
 
 .Pagination {
+  margin: 4.5rem 0 10rem 0;
   display: flex;
   width: fit-content;
 }
 
 .PaginationPage {
-  width: 39px;
-  height: 38px;
+  @include backWhite;
+  width: 3.9rem;
+  height: 3.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid;
   border-right: none;
-  color: black;
+
   background: inherit;
   &:first-of-type {
-    border-radius: 8px 0 0 8px;
+    border-radius: 0.8rem 0 0 0.8rem;
     cursor: pointer;
   }
   &:last-child {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 0.8rem 0.8rem 0;
     border-right: 1px solid;
     cursor: pointer;
   }
   &:only-child {
-    border-radius: 8px;
+    border-radius: 0.8rem;
   }
   &:hover {
-    background: #ededed;
-    color: black;
-    border-color: black;
+    @include backWhite;
   }
   &:disabled {
-    border-color: #b3b3b3;
-    color: #b3b3b3;
+    border-color: $light-gray;
+    color: $light-gray;
 
     &:hover {
       cursor: auto;
@@ -100,38 +97,28 @@ $white-gray: #efefef;
     }
   }
   &--dark {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid $white;
+    color: $white;
     border-right: none;
 
     &:hover {
-      background: #464646;
-      color: white;
-      border-color: white;
+      @include backGray;
     }
     &:disabled {
-      border-color: #4c4c4c;
-      color: #4c4c4c;
+      border-color: $gray;
+      color: $gray;
     }
   }
   &.PaginationPageWithActive {
-    background: black;
-    color: white;
-    border-color: black;
+    @include backBlack;
     &:hover {
       cursor: auto;
-      background: black;
-      color: white;
-      border-color: black;
+      @include backBlack;
     }
     &--dark {
-      background: white;
-      color: black;
-      border-color: white;
+      @include backWhite;
       &:hover {
-        background: white;
-        color: black;
-        border-color: white;
+        @include backWhite;
       }
     }
   }

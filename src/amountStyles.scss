@@ -1,0 +1,23 @@
+$black: #000;
+$white: #fff;
+$light-gray: #b3b3b3;
+$gray: #808080;
+$dark-gray: #464646;
+
+@mixin backWhite {
+  background: $white;
+  color: $black;
+  border-color: $white;
+}
+
+@mixin backBlack {
+  background: $black;
+  color: $white;
+  border-color: $black;
+}
+
+@mixin backGray {
+  background: $dark-gray;
+  color: $white;
+  border-color: $white;
+}

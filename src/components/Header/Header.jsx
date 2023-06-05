@@ -40,7 +40,7 @@ function Header({
         </div>
         <div className="swicher">
           <TurnLight
-            className={cn("turn_light", { light: isLight })}
+            className="turn_light"
             onClick={() => setIsLight(!isLight)}
           />
         </div>

@@ -1,43 +1,59 @@
+@import "../../App.scss";
+
 .card {
   text-align: start;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 2rem;
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pic {
   display: flex;
   flex-direction: column-reverse;
-  width: 360px;
-  max-height: 275px;
-  border-radius: 20px;
+  width: 36rem;
+  max-height: 27.5rem;
+  border-radius: 2rem;
   overflow: hidden;
+  justify-self: center;
   &:hover {
     .overlay {
       height: 15%;
       transition: all 0.5s ease-out;
     }
   }
+  @include lg {
+    width: 30rem;
+    max-height: 23rem;
+  }
 }
 
 .overlay {
-  padding-left: 15px;
-  height: 25px;
+  padding-left: 1.5rem;
+  height: 2.5rem;
   position: absolute;
   overflow: hidden;
-  width: 360px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  width: 36rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.75);
   h4 {
     text-transform: capitalize;
   }
   p {
-    padding-top: 5px;
+    padding-top: 0.5rem;
+  }
+  @include lg {
+    width: 30rem;
   }
 }
 
 img {
-  width: 360px;
-  height: 275px;
+  width: 36rem;
+  height: 27.5rem;
 }

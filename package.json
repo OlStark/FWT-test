@@ -9,6 +9,7 @@
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "fwt-internship-uikit": "^1.0.2",
+    "postcss-sort-media-queries": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
